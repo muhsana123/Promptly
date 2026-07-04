@@ -1,0 +1,80 @@
+
+@media (max-width: 768px) {
+
+    .hero-flex, .about-grid {
+        flex-direction: column; text-align: center; 
+    }
+    .input-group, .service-grid {
+        flex-direction: column;
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%; 
+        flex-direction: column;
+        background: var(--white);
+        width: 100%;
+        height: calc(100vh - 80px);
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        padding-top: 50px;
+        z-index: 99; 
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.active {
+        left: 0; 
+    }
+
+    .is-open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .is-open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .is-open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+     .service-grid {
+        display: grid;
+        /* This creates two equal columns */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+
+ 
+    .service-grid .card:nth-child(3) {
+        grid-column: span 2;
+        width: 100%; 
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        text-align: center;
+    }
+
+  
+    .about-img {
+        order: 1; 
+    }
+
+    .about-text {
+        order: 2; 
+        padding: 0 10px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+}
